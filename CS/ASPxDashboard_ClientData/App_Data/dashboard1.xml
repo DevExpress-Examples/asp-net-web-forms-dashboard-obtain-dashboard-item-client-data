@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="DataSource1">
+      <Name>SalesPerson</Name>
+      <Connection Name="nwindConnection" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="SalesPerson">
+        <Tables>
+          <Table Name="SalesPerson" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="SalesPerson" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Pie 1" ShowCaption="false" DataSource="DataSource1" DataMember="SalesPerson">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DefaultId="DataItem1" />
+        <Dimension DataMember="Country" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <Card ComponentName="cardDashboardItem1" Name="Card 1" ShowCaption="false" DataSource="DataSource1" DataMember="SalesPerson">
+      <DataItems>
+        <Measure DataMember="Extended Price" SummaryType="StdDev" DefaultId="DataItem0" />
+        <Dimension DataMember="Sales Person" DefaultId="DataItem1" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem2" />
+        <Measure DataMember="Extended Price" SummaryType="StdDevp" DefaultId="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem0" />
+        <TargetValue DefaultId="DataItem3" />
+      </Card>
+      <SparklineArgument DefaultId="DataItem2" />
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="pieDashboardItem1" Weight="51.743220807969" />
+      <LayoutItem DashboardItem="cardDashboardItem1" Weight="148.256779192031" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
