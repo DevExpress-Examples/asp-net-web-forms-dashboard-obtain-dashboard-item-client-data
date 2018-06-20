@@ -16,12 +16,13 @@
     <div style="position:absolute; left:0; right:0; top:0; bottom:0;"> 
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
             WorkingMode="Viewer" 
-            ClientSideEvents-Init="function(s, e) { initPopup(); }" 
-            ClientSideEvents-ItemClick="function(s, e) { getClientData(e); }"  
             Height="100%" Width="100%">
+            <ClientSideEvents 
+                Init="function(s, e) { initPopup(); }"
+                ItemClick="function(s, e) { getClientData(e); }" />
         </dx:ASPxDashboard>
     </div>
     </form>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/ClientData.js") %>"></script>
 </body>
 </html>
-<script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/ClientData.js") %>"></script>
