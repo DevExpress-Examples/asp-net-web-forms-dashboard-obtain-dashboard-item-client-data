@@ -5,7 +5,7 @@ function getClientData(args) {
             clickedItemData,
             delta;
         var sparklineAxis = DashboardDataAxisNames.SparklineAxis,
-            defaultAxis = DashboardDataAxisNames.Default;
+            defaultAxis = DashboardDataAxisNames.DefaultAxis;
 
         clientData = args.GetData();
         clickedPoint = args.GetAxisPoint(defaultAxis);
