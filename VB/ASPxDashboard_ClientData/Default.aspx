@@ -18,7 +18,7 @@
             WorkingMode="Viewer" 
             Height="100%" Width="100%">
             <ClientSideEvents 
-                Init="function(s, e) { initPopup(); }" 
+                Init="function(s, e) { initPopup(); }"
                 ItemClick="function(s, e) { getClientData(e); }" />
         </dx:ASPxDashboard>
     </div>
