@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Default.aspx](./CS/ASPxDashboard_ClientData/Default.aspx) (VB: [Default.aspx](./VB/ASPxDashboard_ClientData/Default.aspx))
+* [Default.aspx.cs](./CS/ASPxDashboard_ClientData/Default.aspx.cs) (VB: [Default.aspx](./VB/ASPxDashboard_ClientData/Default.aspx))
+* [ClientData.js](./CS/ASPxDashboard_ClientData/Scripts/ClientData.js) (VB: [ClientData.js](./VB/ASPxDashboard_ClientData/Scripts/ClientData.js))
+<!-- default file list end -->
 # How to obtain a dashboard item's client data in the ASP.NET Dashboard Control
 
 
