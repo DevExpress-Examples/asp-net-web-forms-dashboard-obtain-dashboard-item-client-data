@@ -6,6 +6,9 @@
 * [ClientData.js](./CS/ASPxDashboard_ClientData/Scripts/ClientData.js) (VB: [ClientData.js](./VB/ASPxDashboard_ClientData/Scripts/ClientData.js))
 <!-- default file list end -->
 # How to obtain a dashboard item's client data in the ASP.NET Dashboard Control
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t492284/)**
+<!-- run online end -->
 
 
 <p>The following example demonstrates how to obtain client data corresponding to a particular visual element using <a href="https://documentation.devexpress.com/#Dashboard/clsDevExpressDashboardWebASPxDashboardtopic">ASPxDashboard</a>'s <a href="https://documentation.devexpress.com/#Dashboard/CustomDocument116302">client-side API</a>.</p>
