@@ -5,7 +5,7 @@
 * [Default.aspx.cs](./CS/ASPxDashboard_ClientData/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxDashboard_ClientData/Default.aspx.vb))
 * [ClientData.js](./CS/ASPxDashboard_ClientData/Scripts/ClientData.js) (VB: [ClientData.js](./VB/ASPxDashboard_ClientData/Scripts/ClientData.js))
 <!-- default file list end -->
-# How to obtain a dashboard item's client data in the ASP.NET Web Forms Dashboard Control
+# ASP.NET Web Forms Dashboard Control - How to obtain a dashboard item's client data
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t492284/)**
 <!-- run online end -->
@@ -24,5 +24,10 @@ The `dxChart` displays the detailed chart and shows a variation of actual/targ
 ## Documentation
 
 - [ASP.NET Web Forms Dashboard Control - Client-Side API Overview](https://docs.devexpress.com/Dashboard/116302/web-dashboard/aspnet-web-forms-dashboard-control/client-side-api-overview)
+
+## More Examples
+
+- [ASP.NET Web Forms Dashboard Control - How to obtain a dashboard item's underlying data for a clicked visual element](https://github.com/DevExpress-Examples/aspxdashboard-how-to-obtain-a-dashboard-items-underlying-data-for-a-clicked-visual-element-t492257)
+- [ASPxDashboard - How to obtain underlying data for the specified dashboard item](https://github.com/DevExpress-Examples/aspxdashboard-how-to-obtain-underlying-data-for-the-specified-dashboard-item-t518504)
 
 
