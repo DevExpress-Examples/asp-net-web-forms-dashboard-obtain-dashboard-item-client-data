@@ -19,7 +19,7 @@ In the event handler, the `e.GetData` method is called to obtain dashboard item
 
 The [ASPxClientDashboardItemDataAxis.GetPoints](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemDataAxis#js_aspxclientdashboarditemdataaxis_getpoints) method is used to obtain axis points that belongs to the "Sparkline" data axis. Corresponding actual/target values are obtained using the [ASPxClientDashboardItemData.GetDeltaValue](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboardItemData#js_aspxclientdashboarditemdata_getdeltavalue_deltaid_) method.
 
-The `dxChart` displays the detailed chart and shows a variation of actual/target values over time.
+When you click a card, the `dxChart` displays the detailed chart and shows a variation of actual/target values over time.
 
 ## Documentation
 
