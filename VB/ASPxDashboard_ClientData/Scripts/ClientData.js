@@ -1,5 +1,14 @@
-function getClientData(args) {
-    if (args.ItemName == "cardDashboardItem1") {
+function onBeforeRender(sender) {
+    var dashboardControl = sender.GetDashboardControl();
+
+    var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+    if (viewerApiExtension)
+        viewerApiExtension.on('itemClick', onItemClick);
+}
+
+
+function onItemClick(args) {
+    if (args.itemName == "cardDashboardItem1") {
         var clientData = [],
             clientDataTable = [],
             clickedItemData,
@@ -7,20 +16,20 @@ function getClientData(args) {
         var sparklineAxis = DashboardDataAxisNames.SparklineAxis,
             defaultAxis = DashboardDataAxisNames.DefaultAxis;
 
-        clientData = args.GetData();
-        clickedPoint = args.GetAxisPoint(defaultAxis);
-        clickedItemData = clientData.GetSlice(clickedPoint);
-        delta = args.GetDeltas()[0];
-
-        for (var i = 0; i < clickedItemData.GetAxis(sparklineAxis).GetPoints().length; i++) {
+        clientData = args.getData();
+        clickedPoint = args.getAxisPoint(defaultAxis);
+        clickedItemData = clientData.getSlice(clickedPoint);
+        delta = args.getDeltas()[0];
+       
+        for (var i = 0; i < clickedItemData.getAxis(sparklineAxis).getPoints().length; i++) {
             var dataTableRow = {},
-            axisPoint = clickedItemData.GetSlice(clickedItemData.GetAxis(sparklineAxis).GetPoints()[i]);
+            axisPoint = clickedItemData.getSlice(clickedItemData.getAxis(sparklineAxis).getPoints()[i]);
 
-            dataTableRow["Argument"] = clickedItemData.GetAxis(sparklineAxis).GetPoints()[i].GetValue();
-            if (axisPoint.GetDeltaValue(delta.Id).GetActualValue().GetValue() != null &&
-                axisPoint.GetDeltaValue(delta.Id).GetTargetValue().GetValue() != null) {
-                dataTableRow["Actual"] = axisPoint.GetDeltaValue(delta.Id).GetActualValue().GetValue();
-                dataTableRow["Target"] = axisPoint.GetDeltaValue(delta.Id).GetTargetValue().GetValue();
+            dataTableRow["Argument"] = clickedItemData.getAxis(sparklineAxis).getPoints()[i].getValue();
+            if (axisPoint.getDeltaValue(delta.id).getActualValue().getValue() != null &&
+                axisPoint.getDeltaValue(delta.id).getTargetValue().getValue() != null) {
+                dataTableRow["Actual"] = axisPoint.getDeltaValue(delta.id).getActualValue().getValue();
+                dataTableRow["Target"] = axisPoint.getDeltaValue(delta.id).getTargetValue().getValue();
             }
             else {
                 dataTableRow["Actual"] = 0;
@@ -64,7 +73,7 @@ function getClientData(args) {
     };
 }
 
-function initPopup() {
+function initPopup(sender) {
     $("#myPopup").dxPopup({
         width: 800, height: 600,
         title: "Details",

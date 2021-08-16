@@ -1,28 +1,27 @@
-﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" 
-    Inherits="ASPxDashboard_ClientData.Default" %>
-
-<%@ Register Assembly="DevExpress.Dashboard.v16.2.Web, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
-    Namespace="DevExpress.DashboardWeb" TagPrefix="dx" %>
+﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="ASPxDashboard_ClientData.Default" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-    <title></title>
+	<title></title>
+	<script src="Scripts/ClientData.js"></script>
+	<style type="text/css">
+		html, body, form {  
+			height: 100%;  
+			margin: 0;  
+			padding: 0;  
+			overflow: hidden;  
+		}
+	</style>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div id="myPopup"></div>
-    <div style="position:absolute; left:0; right:0; top:0; bottom:0;"> 
-        <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
-            WorkingMode="Viewer" 
-            Height="100%" Width="100%">
-            <ClientSideEvents 
-                Init="function(s, e) { initPopup(); }"
-                ItemClick="function(s, e) { getClientData(e); }" />
-        </dx:ASPxDashboard>
-    </div>
-    </form>
-    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/Scripts/ClientData.js")%>"></script>
+	<form id="form1" runat="server">
+		<div id="myPopup"></div>
+		<dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
+			WorkingMode="Viewer" Width="100%" Height="100%">
+			<ClientSideEvents BeforeRender="onBeforeRender" Init="initPopup" />
+		</dx:ASPxDashboard>
+	</form>
 </body>
 </html>
