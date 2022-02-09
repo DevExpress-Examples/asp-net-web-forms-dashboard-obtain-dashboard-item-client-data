@@ -6,7 +6,7 @@
 # Dashboard for Web Forms - How to obtain a dashboard item's client data
 
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t492284/)**
+**[[Run Online]](https://codecentral.devexpress.com/128580304/)**
 <!-- run online end -->
 
 The following example uses the DashboardControl's [client-side API](https://docs.devexpress.com/Dashboard/116302/web-dashboard/aspnet-web-forms-dashboard-control/client-side-api-overview) to obtain client data that corresponds to a particular visual element.
