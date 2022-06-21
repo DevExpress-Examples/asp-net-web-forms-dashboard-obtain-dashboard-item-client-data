@@ -2,8 +2,7 @@
 <Dashboard>
   <Title Text="Dashboard" />
   <DataSources>
-    <SqlDataSource ComponentName="DataSource1">
-      <Name>SalesPerson</Name>
+    <SqlDataSource Name="SalesPerson" ComponentName="DataSource1">
       <Connection Name="nwindConnection" FromAppConfig="true" />
       <Query Type="SelectQuery" Name="SalesPerson">
         <Tables>
@@ -13,7 +12,7 @@
           <AllColumns Table="SalesPerson" />
         </Columns>
       </Query>
-      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
@@ -47,6 +46,18 @@
       <Card>
         <ActualValue DefaultId="DataItem0" />
         <TargetValue DefaultId="DataItem3" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate Type="Stretched">
+          <TopValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue1 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <BottomValue2 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
       </Card>
       <SparklineArgument DefaultId="DataItem2" />
     </Card>
