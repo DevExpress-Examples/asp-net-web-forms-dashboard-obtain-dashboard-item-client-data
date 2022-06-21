@@ -6,7 +6,6 @@ function onBeforeRender(sender) {
         viewerApiExtension.on('itemClick', onItemClick);
 }
 
-
 function onItemClick(args) {
     if (args.itemName == "cardDashboardItem1") {
         var clientData = [],
