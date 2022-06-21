@@ -26,6 +26,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <UpgradeBackupLocation />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,7 +76,7 @@
     <Reference Include="DevExpress.Web.v21.1, Version=21.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\dashboard1.xml" />
+    <Content Include="App_Data\Dashboards\dashboard1.xml" />
     <Content Include="App_Data\nwind.mdb" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />

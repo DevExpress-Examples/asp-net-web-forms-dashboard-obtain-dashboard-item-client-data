@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
         <div id="myPopup"></div>
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
-            WorkingMode="Viewer" Width="100%" Height="100%">
+            WorkingMode="Viewer" Width="100%" Height="100%" DashboardStorageFolder = "~/App_Data/Dashboards">
             <ClientSideEvents BeforeRender="onBeforeRender" Init="initPopup" />
         </dx:ASPxDashboard>
     </form>
