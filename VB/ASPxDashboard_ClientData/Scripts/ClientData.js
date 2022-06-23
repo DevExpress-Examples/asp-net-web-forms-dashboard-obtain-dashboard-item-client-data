@@ -1,7 +1,7 @@
 function onBeforeRender(sender) {
     var dashboardControl = sender.GetDashboardControl();
 
-    var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+    var viewerApiExtension = dashboardControl.findExtension('viewerApi');
     if (viewerApiExtension)
         viewerApiExtension.on('itemClick', onItemClick);
 }
