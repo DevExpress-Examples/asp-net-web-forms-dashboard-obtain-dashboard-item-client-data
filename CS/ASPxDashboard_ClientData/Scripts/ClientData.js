@@ -4,6 +4,12 @@ function onBeforeRender(sender) {
     var viewerApiExtension = dashboardControl.findExtension('viewerApi');
     if (viewerApiExtension)
         viewerApiExtension.on('itemClick', onItemClick);
+
+    $("#myPopup").dxPopup({
+        width: 800, height: 600,
+        title: "Details",
+        showCloseButton: true
+    });
 }
 
 function onItemClick(args) {
@@ -70,12 +76,4 @@ function onItemClick(args) {
         $popupContent.append($chart);
         popup.show();
     };
-}
-
-function initPopup(sender) {
-    $("#myPopup").dxPopup({
-        width: 800, height: 600,
-        title: "Details",
-        showCloseButton: true
-    });
 }
