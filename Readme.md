@@ -21,7 +21,7 @@ The [ItemDataAxis.getPoints](https://docs.devexpress.com/Dashboard/js-DevExpress
 
 
 <!-- default file list -->
-## Files to Look at
+## Files to Review
 
 * [Default.aspx](./CS/ASPxDashboard_ClientData/Default.aspx) (VB: [Default.aspx](./VB/ASPxDashboard_ClientData/Default.aspx))
 * [ClientData.js](./CS/ASPxDashboard_ClientData/Scripts/ClientData.js) (VB: [ClientData.js](./VB/ASPxDashboard_ClientData/Scripts/ClientData.js))
