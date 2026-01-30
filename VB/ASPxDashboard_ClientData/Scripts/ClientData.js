@@ -18,8 +18,8 @@ function onItemClick(args) {
             clientDataTable = [],
             clickedItemData,
             delta;
-        var sparklineAxis = DashboardDataAxisNames.SparklineAxis,
-            defaultAxis = DashboardDataAxisNames.DefaultAxis;
+        var sparklineAxis = "Sparkline",
+            defaultAxis = "Default";
 
         clientData = args.getData();
         clickedPoint = args.getAxisPoint(defaultAxis);
@@ -70,7 +70,7 @@ function onItemClick(args) {
         });
 
         var popup = $("#myPopup").data("dxPopup");
-        popup.option('title', clickedPoint.GetValue() + " - Details");
+        popup.option('title', clickedPoint.getValue() + " - Details");
         $popupContent = popup.content();
         $popupContent.empty();
         $popupContent.append($chart);
